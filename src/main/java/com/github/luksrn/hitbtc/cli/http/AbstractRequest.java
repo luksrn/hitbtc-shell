@@ -7,6 +7,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.support.BasicAuthorizationInterceptor;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import com.github.luksrn.hitbtc.cli.AuthenticationSession;
@@ -37,6 +38,10 @@ public abstract class AbstractRequest {
 		return transactions.getBody();
 	}
 	
+	protected void delete(String url) {
+		restTemplate().delete(hitbtcEnv + url);	
+	}
+	
 	protected <T> T post(String url,  Object requestJson, Class<T> result) {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
@@ -44,7 +49,13 @@ public abstract class AbstractRequest {
 
 		HttpEntity<?> entity = new HttpEntity<>(requestJson, headers);
 
-		HttpEntity<T> transactions = restTemplate().postForEntity(hitbtcEnv + url, entity, result);	
-		return transactions.getBody();
+		try {
+			HttpEntity<T> transactions = restTemplate().postForEntity(hitbtcEnv + url, entity, result);	
+			return transactions.getBody();
+		} catch (HttpClientErrorException r) {
+			// TODO 
+			System.err.println("* " + r.getResponseBodyAsString() );
+			throw r;
+		}
 	}
 }

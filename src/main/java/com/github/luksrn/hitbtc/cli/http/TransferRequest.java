@@ -1,12 +1,10 @@
 package com.github.luksrn.hitbtc.cli.http;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import com.github.luksrn.hitbtc.http.dto.TransactionID;
+import com.github.luksrn.hitbtc.cli.http.dto.TransactionID;
 
 @Component
 public class TransferRequest extends AbstractRequest {

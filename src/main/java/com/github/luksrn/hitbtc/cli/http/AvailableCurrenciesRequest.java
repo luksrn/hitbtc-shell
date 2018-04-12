@@ -2,7 +2,7 @@ package com.github.luksrn.hitbtc.cli.http;
 
 import org.springframework.stereotype.Component;
 
-import com.github.luksrn.hitbtc.http.dto.AvailableCurrency;
+import com.github.luksrn.hitbtc.cli.http.dto.AvailableCurrency;
 
 @Component
 public class AvailableCurrenciesRequest extends AbstractRequest {

@@ -13,9 +13,9 @@ import com.github.luksrn.hitbtc.cli.TableGenerator;
 import com.github.luksrn.hitbtc.cli.http.AccountBalanceRequest;
 import com.github.luksrn.hitbtc.cli.http.TransactionRequest;
 import com.github.luksrn.hitbtc.cli.http.TransferRequest;
-import com.github.luksrn.hitbtc.http.dto.Balance;
-import com.github.luksrn.hitbtc.http.dto.Transaction;
-import com.github.luksrn.hitbtc.http.dto.TransactionID;
+import com.github.luksrn.hitbtc.cli.http.dto.Balance;
+import com.github.luksrn.hitbtc.cli.http.dto.Transaction;
+import com.github.luksrn.hitbtc.cli.http.dto.TransactionID;
 
 @ShellComponent
 @ShellCommandGroup("Hit BTC - Account")

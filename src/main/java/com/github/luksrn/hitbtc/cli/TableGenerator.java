@@ -69,5 +69,5 @@ public class TableGenerator<T> {
 				return row == theRow && column == col;
 			}
 		};
-}
+	}
 }

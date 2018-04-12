@@ -10,8 +10,8 @@ import org.springframework.shell.table.Table;
 import com.github.luksrn.hitbtc.cli.TableGenerator;
 import com.github.luksrn.hitbtc.cli.http.AvailableCurrenciesRequest;
 import com.github.luksrn.hitbtc.cli.http.SymbolCurrencyPairRequest;
-import com.github.luksrn.hitbtc.http.dto.AvailableCurrency;
-import com.github.luksrn.hitbtc.http.dto.SymbolCurrencyPair;
+import com.github.luksrn.hitbtc.cli.http.dto.AvailableCurrency;
+import com.github.luksrn.hitbtc.cli.http.dto.SymbolCurrencyPair;
 
 @ShellComponent
 @ShellCommandGroup("Hit BTC - Public")

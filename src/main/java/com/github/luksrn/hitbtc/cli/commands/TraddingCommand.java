@@ -11,7 +11,7 @@ import org.springframework.shell.table.Table;
 
 import com.github.luksrn.hitbtc.cli.TableGenerator;
 import com.github.luksrn.hitbtc.cli.http.TradingBalanceRequest;
-import com.github.luksrn.hitbtc.http.dto.Balance;
+import com.github.luksrn.hitbtc.cli.http.dto.Balance;
 
 
 @ShellComponent

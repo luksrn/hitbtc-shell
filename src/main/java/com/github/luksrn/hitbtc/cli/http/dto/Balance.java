@@ -1,4 +1,4 @@
-package com.github.luksrn.hitbtc.http.dto;
+package com.github.luksrn.hitbtc.cli.http.dto;
 
 public class Balance {
 
